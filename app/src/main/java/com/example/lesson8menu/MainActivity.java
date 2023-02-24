@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.lesson8menu.game2048test.ScoreManagement;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,27 +25,24 @@ public class MainActivity extends AppCompatActivity {
 
         String[] items = {getResources().getString(R.string.menu_item_play),
                 getResources().getString(R.string.menu_item_scores),
-                getResources().getString(R.string.menu_item_settings),
                 getResources().getString(R.string.menu_item_help)};
 
-        ArrayAdapter<String> adapt = new ArrayAdapter<String>(this, R.layout.list, items);
+        ArrayAdapter<String> adapt = new ArrayAdapter<>(this, R.layout.list, items);
 
         menuList.setAdapter(adapt);
 
         menuList.setOnItemClickListener((adapterView, view, position, id) -> {
-
+            Intent intent;
             switch (position) {
                 case 0:
-                    Intent intent = new Intent(MainActivity.this, SelectorActivity.class);
+                    intent = new Intent(MainActivity.this, SelectorActivity.class);
                     startActivity(intent);
                     break;
                 case 1:
-                    Toast.makeText(MainActivity.this, "2", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(MainActivity.this, ScoreManagement.class);
+                    startActivity(intent);
                     break;
                 case 2:
-                    Toast.makeText(MainActivity.this, "3", Toast.LENGTH_SHORT).show();
-                    break;
-                case 3:
                     Toast.makeText(MainActivity.this, "4", Toast.LENGTH_SHORT).show();
                     break;
             }

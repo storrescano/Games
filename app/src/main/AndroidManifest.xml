@@ -29,7 +29,7 @@
         </activity>
         <activity android:name="com.example.lesson8menu.SelectorActivity"/>
         <activity android:name="com.example.lesson8menu.game2048test.SplashScreen"/>
-        <activity android:name="com.example.lesson8menu.game2048test.Menu" />
+        <activity android:name="com.example.lesson8menu.game2048test.Menu2048" />
         <activity android:name="com.example.lesson8menu.game2048test.GameActivity" />
         <activity android:name="com.example.lesson8menu.game2048test.ScoreManagement" />
 

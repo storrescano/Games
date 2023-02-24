@@ -11,7 +11,7 @@ import com.example.lesson8menu.game2048test.dbScores.ScoreDbHelper;
 import com.example.lesson8menu.R;
 
 
-public class Menu extends AppCompatActivity {
+public class Menu2048 extends AppCompatActivity {
 
 
     @Override
@@ -31,10 +31,10 @@ public class Menu extends AppCompatActivity {
         scoreDbHelper.close();
 
         Button start = findViewById(R.id.start_game_button);
-        start.setOnClickListener(v -> startActivity(new Intent(Menu.this, GameActivity.class)));
+        start.setOnClickListener(v -> startActivity(new Intent(Menu2048.this, GameActivity.class)));
 
         Button scores = findViewById(R.id.scores_button);
-        scores.setOnClickListener(v -> startActivity(new Intent(Menu.this, ScoreManagement.class)));
+        scores.setOnClickListener(v -> startActivity(new Intent(Menu2048.this, ScoreManagement.class)));
 
     }
 

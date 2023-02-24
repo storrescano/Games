@@ -45,7 +45,7 @@ public class SplashScreen extends AppCompatActivity {
 
         int SPLASH_SCREEN_TIME = 5000;
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashScreen.this,Menu.class);
+            Intent intent = new Intent(SplashScreen.this, Menu2048.class);
             startActivity(intent);
             finish();
         }, SPLASH_SCREEN_TIME);
